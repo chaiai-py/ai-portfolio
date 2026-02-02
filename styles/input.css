@@ -597,6 +597,17 @@ body:not(.light-mode) .eye {
 
 /* ------------------------------------- */
 /* LIGHT MODE: COTTAGECORE / SOLARPUNK */
+/* Chat Status Color */
+.chat-status {
+    color: #4AF2A1;
+    /* Mint Green for Dark Mode */
+}
+
+.light-mode .chat-status {
+    color: #059669;
+    /* Darker Green for Light Mode */
+}
+
 /* ------------------------------------- */
 .light-mode .aura-orb {
     /* Soft warm glow (Solarpunk/Nature) using Sakura Pink */

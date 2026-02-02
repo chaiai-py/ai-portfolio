@@ -2727,6 +2727,12 @@ body:not(.light-mode) .eye {
   border-radius: 1px;
   box-shadow: 0 0 8px var(--neon-mint), 0 0 3px #fff;
 }
+.chat-status {
+  color: #4AF2A1;
+}
+.light-mode .chat-status {
+  color: #059669;
+}
 .light-mode .aura-orb {
   background: radial-gradient(circle, #FFB7C5 20%, transparent 60%);
   box-shadow: 0 0 15px #FF69B4, inset 0 0 10px #FFB7C5;
