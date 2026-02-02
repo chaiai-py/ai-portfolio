@@ -3084,7 +3084,7 @@ body {
 .chat-input {
   flex-grow: 1;
   background: transparent;
-  border: 1px solid rgba(74, 242, 161, 0.5);
+  border: 1px solid var(--glass-border);
   padding: 0.5rem;
   color: var(--txt-bone);
   border-radius: 4px;
@@ -3094,7 +3094,8 @@ body {
 
 .chat-input:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(74, 242, 161, 0.2);
+  border-color: var(--neon-mint);
+  box-shadow: 0 0 10px var(--glass-shine);
 }
 
 .typing-indicator {
