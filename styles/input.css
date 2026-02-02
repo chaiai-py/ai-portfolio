@@ -9,75 +9,62 @@
 
 /* Cyberpunk-Cottagecore Design System */
 :root {
-    /* Palette */
-    --void-moss: #000000;
-    /* Pure Black */
-    --deep-moss: #050505;
-    /* Almost Black */
-    --neon-mint: #4AF2A1;
-    /* Primary Accent */
-    --neon-pink: #FF2E88;
-    /* Sakura Accent */
-    --hologram-fern: #2d5a45;
-    /* Secondary/Muted */
-    --txt-bone: #E0E5D7;
-    /* Text Base */
-    --txt-muted: #8A9A90;
-
-    /* Semantic Backgrounds */
-    --card-bg: rgba(5, 10, 8, 0.7);
-    --console-bg: rgba(0, 0, 0, 0.8);
-    --nav-bg: rgba(0, 0, 0, 0.3);
-
-    /* Glass Effects */
-    --glass-bg: rgba(18, 24, 21, 0.65);
-    /* Lighter, slight moss tint */
-    --glass-border: #2d5a45;
-    --glass-shine: rgba(74, 242, 161, 0.15);
-
-    /* Animations */
-    /* Animations */
+    /* CYBERPUNK THEME (Dark Mode) */
+    --void-moss: #020205;
+    /* Deep Void */
+    --deep-moss: #050510;
+    --neon-mint: #00F3FF;
+    /* Cyan */
+    --neon-pink: #FF0099;
+    /* Neon Magenta */
+    --hologram-fern: #003B46;
+    /* Deep Cyan */
+    --txt-bone: #E0F7FA;
+    /* Cyan White */
+    --txt-muted: #64748B;
+    --card-bg: rgba(2, 2, 5, 0.85);
+    --console-bg: rgba(0, 0, 0, 0.9);
+    --nav-bg: rgba(0, 0, 0, 0.6);
+    --glass-bg: rgba(2, 2, 5, 0.7);
+    --glass-border: #00F3FF;
+    --glass-shine: rgba(0, 243, 255, 0.1);
     --scanline-speed: 6s;
-
-    /* Background Gradient */
-    --bg-gradient: radial-gradient(circle at 10% 20%, rgba(74, 242, 161, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(74, 242, 161, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 85% 15%, rgba(255, 46, 136, 0.1) 0%, transparent 35%),
-        radial-gradient(circle at 15% 85%, rgba(255, 46, 136, 0.08) 0%, transparent 30%),
-        radial-gradient(circle at 50% 50%, rgba(5, 10, 8, 0.95) 0%, rgba(0, 0, 0, 1) 100%);
+    --bg-gradient: radial-gradient(circle at 10% 20%, rgba(0, 243, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 243, 255, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255, 0, 153, 0.15) 0%, transparent 35%),
+        radial-gradient(circle at 15% 85%, rgba(255, 0, 153, 0.1) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(2, 2, 5, 0.95) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 /* Light Mode Overrides */
 .light-mode {
-    --void-moss: #f8fafc;
-    /* Almost White */
-    --deep-moss: #e2e8f0;
-    /* Light Grey */
-    --neon-mint: #047857;
-    /* Darker Green (Emerald 700) for visibility */
-    --neon-pink: #be185d;
-    /* Darker Pink (Pink 700) */
-    --hologram-fern: #cbd5e1;
-    --txt-bone: #1a1a1a;
-    /* Almost Black */
-    --txt-muted: #475569;
-
-    /* Semantic Backgrounds Light Mode */
-    --card-bg: rgba(255, 255, 255, 0.8);
-    --console-bg: rgba(255, 255, 255, 0.9);
-    --nav-bg: rgba(255, 255, 255, 0.9);
-
-    /* Glass Effects */
-    --glass-bg: rgba(255, 255, 255, 0.7);
-    --glass-border: #cbd5e1;
-    --glass-shine: rgba(5, 150, 105, 0.1);
-
-    /* Background Gradient Light Mode */
-    --bg-gradient: radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(5, 150, 105, 0.03) 0%, transparent 40%),
-        radial-gradient(circle at 85% 15%, rgba(219, 39, 119, 0.05) 0%, transparent 35%),
-        radial-gradient(circle at 15% 85%, rgba(219, 39, 119, 0.04) 0%, transparent 30%),
-        radial-gradient(circle at 50% 50%, rgba(248, 250, 252, 0.95) 0%, rgba(255, 255, 255, 1) 100%);
+    /* SAKURA CHERRY BLOSSOM THEME (Light Mode) */
+    --void-moss: #FFF0F5;
+    /* Lavender Blush */
+    --deep-moss: #FFE4E1;
+    /* Misty Rose */
+    --neon-mint: #059669;
+    /* Emerald Green (Leaves) - Primary Accent */
+    --neon-pink: #DB2777;
+    /* Deep Pink (Blossoms) - Secondary Accent */
+    --hologram-fern: #FBCFE8;
+    /* Pink Border */
+    --txt-bone: #4A1D2F;
+    /* Dark Wine/Brown */
+    --txt-muted: #865C6C;
+    /* Muted Mauve */
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --console-bg: rgba(255, 255, 255, 0.85);
+    --nav-bg: rgba(255, 240, 245, 0.9);
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: #FFB7C5;
+    /* Cherry Blossom Pink */
+    --glass-shine: rgba(255, 105, 180, 0.1);
+    --bg-gradient: radial-gradient(circle at 10% 20%, rgba(255, 183, 197, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 15%, rgba(255, 182, 193, 0.2) 0%, transparent 35%),
+        radial-gradient(circle at 15% 85%, rgba(255, 182, 193, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 50% 50%, rgba(255, 240, 245, 0.95) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 
@@ -124,10 +111,9 @@ body {
 .chat-input {
     flex-grow: 1;
     background: transparent;
-    border: 1px solid rgba(74, 242, 161, 0.5);
+    border: 1px solid var(--glass-border);
     padding: 0.5rem;
     color: var(--txt-bone);
-    /* Gray-white */
     border-radius: 4px;
     font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
@@ -135,7 +121,8 @@ body {
 
 .chat-input:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(74, 242, 161, 0.2);
+    border-color: var(--neon-mint);
+    box-shadow: 0 0 10px var(--glass-shine);
 }
 
 .typing-indicator {
@@ -547,6 +534,7 @@ body {
 .animate-breathe {
     animation: breathe 3s infinite ease-in-out;
 }
+
 /* Custom Cyberpunk Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
     width: 5px;
