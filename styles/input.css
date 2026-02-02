@@ -554,3 +554,149 @@ body {
     background-color: var(--neon-mint);
     box-shadow: 0 0 5px var(--neon-mint);
 }
+
+/* Aura Orb Styles */
+.aura-orb {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    /* Eyes Container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* Space between eyes */
+    position: relative;
+}
+
+/* Common Eye Styles */
+.eye {
+    transition: all 0.3s ease;
+    animation: blink 4s infinite;
+}
+
+/* ----------------------------- */
+/* DARK MODE: CYBERPUNK SCI-FI  */
+/* ----------------------------- */
+body:not(.light-mode) .aura-orb {
+    background: radial-gradient(circle, var(--neon-mint) 15%, transparent 70%);
+    box-shadow: 0 0 20px var(--neon-mint), inset 0 0 15px var(--neon-mint);
+    animation: pulse-cyber 3s infinite ease-in-out;
+}
+
+body:not(.light-mode) .eye {
+    width: 6px;
+    height: 4px;
+    /* Narrow, robotic slits */
+    background-color: #E0F7FA;
+    border-radius: 1px;
+    /* Sharp, tech edges */
+    box-shadow: 0 0 8px var(--neon-mint), 0 0 3px #fff;
+}
+
+/* ------------------------------------- */
+/* LIGHT MODE: COTTAGECORE / SOLARPUNK */
+/* ------------------------------------- */
+.light-mode .aura-orb {
+    /* Soft warm glow (Solarpunk/Nature) using Sakura Pink */
+    background: radial-gradient(circle, #FFB7C5 20%, transparent 60%);
+    box-shadow: 0 0 15px #FF69B4, inset 0 0 10px #FFB7C5;
+    animation: pulse-solar 4s infinite ease-in-out;
+}
+
+.light-mode .eye {
+    width: 7px;
+    height: 9px;
+    /* Large, rounded organic eyes */
+    background-color: #4A1D2F;
+    /* Dark organic tone */
+    border-radius: 50%;
+    /* Soft, natural shape */
+    box-shadow: none;
+    /* No robotic glow */
+}
+
+/* Rotating Petals/Leaves for Light Mode */
+.light-mode .aura-orb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(#FF1493 20%, transparent 20%);
+    background-size: 8px 8px;
+    opacity: 0.6;
+    border-radius: 50%;
+    animation: rotate-petals 12s linear infinite;
+    pointer-events: none;
+}
+
+/* ANIMATIONS */
+@keyframes pulse-cyber {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--neon-mint), inset 0 0 10px var(--neon-mint);
+        opacity: 0.8;
+    }
+
+    50% {
+        box-shadow: 0 0 35px var(--neon-mint), inset 0 0 20px var(--neon-mint);
+        opacity: 1;
+    }
+
+    /* Glitch flicker effect */
+    92% {
+        opacity: 1;
+    }
+
+    93% {
+        opacity: 0.6;
+    }
+
+    94% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-solar {
+
+    0%,
+    100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+        box-shadow: 0 0 10px #FFB7C5;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+        box-shadow: 0 0 20px #FF69B4;
+    }
+}
+
+@keyframes rotate-petals {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    96%,
+    100% {
+        transform: scaleY(1);
+    }
+
+    98% {
+        transform: scaleY(0.1);
+    }
+}
