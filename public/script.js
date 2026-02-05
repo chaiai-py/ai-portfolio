@@ -176,14 +176,14 @@ function appData() {
             {
                 id: 1,
                 title: 'The Ghost in the Shell Script: Automating My Life',
-                date: 'Oct 24, 2025',
+                date: 'Jan 24, 2026',
                 summary: 'How I used simple bash scripts to reclaim 10 hours of my week.',
                 content: 'Automation isn\'t just for servers. In this post, I explore how I applied DevOps principles to my daily routine, from meal prep scheduling to automated budget tracking. It started with a simple cron job...'
             },
             {
                 id: 2,
                 title: 'Neon Gardening: Hydroponics meet IoT',
-                date: 'Nov 12, 2025',
+                date: 'Jan 12, 2026',
                 summary: 'Building a self-sustaining indoor garden with Arduino and a lot of UV lights.',
                 content: 'My cottagecore dreams collided with my cyberpunk reality. Using an ESP32, some water pumps, and a custom dashboard, I created a hydroponic system that texts me when the pH is off.'
             },
@@ -482,7 +482,7 @@ function appData() {
                 this.stackChartInstance = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: ['AUTOMATION', 'RAG SYSTEMS', 'LLM AGENTS', 'PYTHON / APIS', 'DATA OPS'],
+                        labels: ['WORKFLOW AUTOMATION', 'RAG SYSTEMS', 'LLM AGENTS', 'PYTHON / APIS', 'DATA OPS'],
                         datasets: [{
                             data: [30, 25, 20, 15, 10],
                             backgroundColor: palette,
