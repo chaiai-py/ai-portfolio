@@ -487,7 +487,7 @@ function appData() {
                             data: [30, 25, 20, 15, 10],
                             backgroundColor: palette,
                             borderColor: 'transparent',
-                            borderWidth: 2,
+                            borderWidth: 1,
                             hoverOffset: 4
                         }]
                     },
@@ -522,7 +522,7 @@ function appData() {
                                     const midAngle = (startAngle + endAngle) / 2;
                                     const startX = x + Math.cos(midAngle) * outerRadius;
                                     const startY = y + Math.sin(midAngle) * outerRadius;
-                                    const lineLen = 15;
+                                    const lineLen = 10; // Reduced line length to pull labels closer
                                     const endX = x + Math.cos(midAngle) * (outerRadius + lineLen);
                                     const endY = y + Math.sin(midAngle) * (outerRadius + lineLen);
 
@@ -535,7 +535,7 @@ function appData() {
                                     ctx.stroke();
 
                                     const label = chart.data.labels[index];
-                                    ctx.font = '10px "Monaco", "Roboto Mono", monospace';
+                                    ctx.font = '8px "Monaco", "Roboto Mono", monospace'; // Reduced font size
                                     ctx.fillStyle = text;
 
                                     const isRight = Math.cos(midAngle) > 0;
