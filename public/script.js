@@ -239,23 +239,23 @@ function appData() {
                 `
             },
             {
-                title: 'Weird Wanderess',
-                desc: 'Personal blog for worldly exploration.',
-                tags: ['Blog', 'Exploration', 'Personal'],
-                link: 'https://charlenecordero.github.io/weird-wanderess/',
+                title: 'Codes and Wanders',
+                desc: 'Personal blog exploring the intersection of code, travel, and life.',
+                tags: ['Blog', 'Travel', 'Tech Life'],
+                link: 'https://charlenecordero.github.io/codes-and-wanders/',
                 details: `
-                    <h4 class="text-[var(--neon-pink)] font-bold text-lg mb-2">Travel & Exploration Log</h4>
-                    <p class="mb-4">"Weird Wanderess" is my personal brand for travel documenting. It captures the intersection of solo travel, cultural immersion, and finding the "weird" or unique in every destination.</p>
+                    <h4 class="text-[var(--neon-pink)] font-bold text-lg mb-2">Digital Nomad Log</h4>
+                    <p class="mb-4">"Codes and Wanders" is my personal space for documenting the journey of a tech professional exploring the world. It covers technical tutorials, travel guides, and reflections on the digital nomad lifestyle.</p>
                     
-                    <h4 class="text-[var(--neon-mint)] font-bold text-lg mb-2">Highlights</h4>
+                    <h4 class="text-[var(--neon-mint)] font-bold text-lg mb-2">Topics</h4>
                     <ul class="list-disc list-inside mb-4 pl-4 text-[var(--txt-muted)] space-y-1">
-                        <li><strong>Content Creation:</strong> Photography and storytelling from 10+ countries.</li>
-                        <li><strong>Community Building:</strong> grew a community of like-minded solo female travelers.</li>
+                        <li><strong>Tech & Code:</strong> Developer diaries and learning logs.</li>
+                        <li><strong>Wanderlust:</strong> Stories from the road and remote work tips.</li>
                     </ul>
 
                     <div class="mt-6 p-4 border border-[#2d5a45] bg-project-frame rounded text-center">
-                        <p class="text-[10px] text-[var(--neon-mint)] mb-2 uppercase tracking-widest">Connect</p>
-                        <a href="https://charlenecordero.github.io/weird-wanderess/" target="_blank" class="inline-block border border-[var(--neon-pink)] text-[var(--neon-pink)] px-6 py-2 rounded font-bold hover:bg-[var(--neon-pink)] hover:text-black transition-colors">VISIT PAGE</a>
+                        <p class="text-[10px] text-[var(--neon-mint)] mb-2 uppercase tracking-widest">Read More</p>
+                        <a href="https://charlenecordero.github.io/codes-and-wanders/" target="_blank" class="inline-block border border-[var(--neon-pink)] text-[var(--neon-pink)] px-6 py-2 rounded font-bold hover:bg-[var(--neon-pink)] hover:text-black transition-colors">VISIT BLOG</a>
                     </div>
                 `
             },
@@ -281,13 +281,13 @@ function appData() {
                 `
             },
             {
-                title: 'CyCo.ai',
-                desc: 'Future AI startup brand.',
+                title: 'Cyco Systems',
+                desc: 'Cyberpunk and Cottagecore brand identity — high tech, soft life.',
                 tags: ['Startup', 'AI', 'Future'],
-                link: 'https://www.https://charlenecordero.github.io/cyco.ai/',
+                link: 'https://charlenecordero.github.io/cyco.ai/',
                 details: `
                     <h4 class="text-[var(--neon-pink)] font-bold text-lg mb-2">Future Concept</h4>
-                    <p class="mb-4">CyberCottage is the brand identity for my future ventures in "Cozy AI"—technology designed to help humans disconnect and live simpler lives, paradoxically through automation.</p>
+                    <p class="mb-4">Cyco Systems is the brand identity for my future ventures in "Cozy AI"—technology designed to help humans disconnect and live simpler lives, paradoxically through automation.</p>
                     
                     <h4 class="text-[var(--neon-mint)] font-bold text-lg mb-2">Vision</h4>
                     <p class="text-[var(--txt-muted)]">"High Tech, Soft Life." The goal is to build tools that automate the drudgery of modern existence (admin, scheduling, basic comms) so people have more time for "cottagecore" activities like gardening, crafting, and resting.</p>
@@ -319,6 +319,28 @@ function appData() {
                         <a href="https://github.com/charlenecordero/ai-portfolio" target="_blank" class="inline-block bg-[#4AF2A1] text-black px-6 py-2 rounded font-bold hover:bg-white transition-colors">VIEW REPO</a>
                     </div>
                 `
+            },
+            {
+                title: 'Aura',
+                desc: 'The AI guide living in this portfolio.',
+                tags: ['AI Agent', 'NLP', 'Interaction Design'],
+                link: '#',
+                details: `
+                    <h4 class="text-[var(--neon-pink)] font-bold text-lg mb-2">System Identity</h4>
+                    <p class="mb-4">Aura is the resident AI agent of this portfolio, designed to help visitors navigate my experience and projects using natural language. It represents the "Human-AI Interaction" pillar of my work.</p>
+                    
+                    <h4 class="text-[var(--neon-mint)] font-bold text-lg mb-2">Capabilities</h4>
+                    <ul class="list-disc list-inside mb-4 pl-4 text-[var(--txt-muted)] space-y-1">
+                        <li><strong>Contextual Awareness:</strong> Understands querying about my specific resume history.</li>
+                        <li><strong>Personality:</strong> Tuned to be helpful, professional, yet slightly "cyber-punk" in tone.</li>
+                        <li><strong>Zero-Latency:</strong> Runs Client-Side for instant interactions.</li>
+                    </ul>
+
+                    <div class="mt-6 p-4 border border-[#2d5a45] bg-project-frame rounded text-center">
+                        <p class="text-[10px] text-[var(--neon-mint)] mb-2 uppercase tracking-widest">Interact</p>
+                        <button onclick="document.querySelector('[x-data]').__x.$data.toggleChat()" class="inline-block bg-[var(--neon-mint)] text-black px-6 py-2 rounded font-bold hover:bg-white transition-colors">OPEN CHAT CONSOLE</button>
+                    </div>
+                `
             }
         ],
 
@@ -328,7 +350,7 @@ function appData() {
         sectionTitles: {
             'dashboard': { title: 'SYSTEM_DASHBOARD', subtitle: 'KPIs & status overview.' },
             'about': { title: 'IDENTITY_CORE', subtitle: 'Personal & Professional Bio' },
-            'projects': { title: 'THE_LAB', subtitle: 'AI Projects & Experiments' },
+            'projects': { title: 'THE_LAB', subtitle: 'Projects & Experiments // Code. Hack. Automate. Innovate' },
             'experience': { title: 'DEPLOY_LOGS', subtitle: 'Work Experience & History' },
             'blog': { title: 'NEURAL_ARCHIVES', subtitle: 'Thoughts, Logs & Tutorials' },
             'contact': { title: 'INITIALIZE_HANDSHAKE', subtitle: 'Connect & Collaborate' }

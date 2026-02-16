@@ -174,7 +174,7 @@
             <button @click="currentSection = 'projects'" :class="{'active': currentSection === 'projects'}"
                 class="btn-hud">
                 <i class="fa-solid fa-flask"></i> <span class="md:hidden">LAB</span><span
-                    class="hidden md:inline">PROJECTS</span>
+                    class="hidden md:inline">PROGRAMS</span>
             </button>
             <button @click="currentSection = 'experience'" :class="{'active': currentSection === 'experience'}"
                 class="btn-hud">
@@ -1557,8 +1557,17 @@
                                     x-text="selectedProject.title"></h2>
                             </div>
 
+                            <!-- Tags -->
+                            <div class="flex flex-wrap gap-2 mb-6 px-4 md:px-8">
+                                <template x-for="tag in selectedProject.tags" :key="tag">
+                                    <span
+                                        class="text-[10px] uppercase border border-[var(--glass-border)] text-[var(--neon-mint)] px-2 py-0.5 rounded-sm font-tech tracking-wider"
+                                        x-text="tag"></span>
+                                </template>
+                            </div>
+
                             <!-- Content -->
-                            <div class="flex-1 overflow-y-auto pr-2 custom-scrollbar">
+                            <div class="flex-1 overflow-y-auto pr-2 custom-scrollbar px-4 md:px-8">
                                 <div
                                     class="prose prose-invert max-w-none font-tech text-sm md:text-base text-[#8A9A90] leading-relaxed pb-8">
                                     <div x-html="selectedProject.details"></div>
