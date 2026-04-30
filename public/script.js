@@ -1,3 +1,21 @@
+/**
+ * Checks if it's currently daytime in the Philippines (UTC+8).
+ * Uses approximate Manila sunrise (5:30 AM) and sunset (6:00 PM).
+ */
+function isDaytimeInPH() {
+    const now = new Date();
+    // Get current hour in Asia/Manila timezone
+    const phTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Manila' }));
+    const hour = phTime.getHours();
+    const minutes = phTime.getMinutes();
+    const timeInMinutes = hour * 60 + minutes;
+
+    const sunrise = 5 * 60 + 30;  // 5:30 AM = 330 minutes
+    const sunset  = 18 * 60;      // 6:00 PM = 1080 minutes
+
+    return timeInMinutes >= sunrise && timeInMinutes < sunset;
+}
+
 function appData() {
     return {
         currentSection: 'dashboard',
@@ -6,12 +24,13 @@ function appData() {
         fromEmail: '',
         inputQuery: '',
         inputQuery: '',
-        isLightMode: false, // Always start in Dark Mode on refresh
+        isLightMode: false, // Will be set properly in init()
         visitorCount: 10420, // Default display value
 
         toggleTheme() {
             this.isLightMode = !this.isLightMode;
             localStorage.setItem('theme_v4', this.isLightMode ? 'light' : 'dark');
+            localStorage.setItem('theme_manual_override', 'true');
             this.refreshCharts();
         },
 
@@ -924,6 +943,19 @@ function appData() {
         init() {
             console.log("CORE SYSTEM v2.1 LOADED - " + new Date().toISOString());
             this.chatOpen = false; // Ensure chat is closed on load
+
+            // Theme: Check if user has manually overridden, otherwise sync to PH daylight
+            const manualOverride = localStorage.getItem('theme_manual_override');
+            if (manualOverride === 'true') {
+                // Respect the user's manual choice
+                const savedTheme = localStorage.getItem('theme_v4');
+                this.isLightMode = savedTheme === 'light';
+            } else {
+                // Auto-set based on Philippine sunrise/sunset
+                this.isLightMode = isDaytimeInPH();
+                localStorage.setItem('theme_v4', this.isLightMode ? 'light' : 'dark');
+            }
+
             this.refreshCharts();
 
             // Initial Typewriter
